@@ -105,33 +105,33 @@ class RKMD_Custom_Post_Type_Member_Admin {
 	 * @return function creates custom post type
 	 */
 	public function create_cpt_bautagebuch() {
-	    register_post_type( 'bautagebuch',
+	    register_post_type( 'member',
 	        array(
 	            'labels' => array(
-	                'name' => 'Bautagebuch',
-	                'singular_name' => 'Artikel',
-	                'add_new' => 'Hinzufügen',
-	                'add_new_item' => 'Neuen Artikel hinzufügen',
-	                'edit' => 'Bearbeiten',
-	                'edit_item' => 'Atrikel bearbeiten',
-	                'new_item' => 'Neuen Artikel',
-	                'view' => 'ansehen',
-	                'view_item' => 'Artikel anzeigen',
-	                'search_items' => 'Suche Artikel',
-	                'not_found' => 'Keine Einträge gefunden',
-	                'not_found_in_trash' => 'Keine Artikel im Müll gefunden',
-	                'parent' => 'Hauptartikel'
+	                'name' => 'Team',
+	                'singular_name' => 'Member',
+	                'add_new' => 'New member',
+	                'add_new_item' => 'Add new member',
+	                'edit' => 'Edit',
+	                'edit_item' => 'Edit member',
+	                'new_item' => 'New member',
+	                'view' => 'view',
+	                'view_item' => 'View member',
+	                'search_items' => 'Search members',
+	                'not_found' => 'No members found',
+	                'not_found_in_trash' => 'No members found in trash',
+	                'parent' => 'Parent member'
 	            ),
 	            'public' => true,
 	            'menu_position' => 4,
 	            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
 	            'taxonomies' => array( '' ),
-	            'menu_icon' => 'dashicons-book-alt',
+	            'menu_icon' => 'dashicons-groups',
 	            'has_archive' => false,
 
 	            // The rewrite handles the URL structure.
 				'rewrite' => array(
-					'slug'       => 'artikel',
+					'slug'       => 'member',
 					'with_front' => false,
 					'pages'      => true,
 					'feeds'      => true,
